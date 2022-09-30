@@ -50,7 +50,7 @@ a{
     justify-content: space-between;
 }
 
-.logo{
+.logo a{
     font-size: 30px;
     color: #f55951;
     letter-spacing: 2px;
