@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    padding: 0;
+}
+.grid-section{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 160px 0;
+    /* border: 2px solid #f55951; */
+}
+.grid-items{
+    background-color: #fff;
+    padding: 45px;
+    /* border: 2px solid #f55951; */
+}
+
+
+
+/* Navbar Start */
+.nav{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    background-color: #2b2b2b;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    padding-right: 45px;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 30px;
+    color: #f55951;
+    letter-spacing: 2px;
+}
+
+.navMenu{
+    display: flex;
+    list-style-type: none;
+}
+
+.navItems{
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+.navItems a{
+    padding: 1rem;
+    letter-spacing: 2px;
+
+}
+.navItems a:hover{
+    color: #f55951;
+    font-weight: bold;
+}
+ .active{
+    border-bottom: 2px solid #f55951;
+    color: #f55951;
+    font-weight: bold;
+}
+
+.navScrolled{
+    background-color: #fff;
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: 0.4s;
+    color: #f55951;
+}
+
+.navLink.changed{
+    color: #f55951;
+}
+/* Navbar End */
+
+/* Home Section Content */
+.headline{
+    font-size: 30px;
+    color: #f55951;
+}
+
+.description{
+    margin-top: 1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.textSpan{
+    color: #f55951;
+    font-weight: bold;
+}
+
+.btnFramer{
+    width: 100%;
+    margin: 45px auto;
+}
+
+.customBtn{
+    width: 200px;
+    margin-top: 60px;
+    color: #fff;
+    position: relative;
+    background: transparent;
+    font-weight: 700;
+    box-shadow: inset 2px 2px 2px 0px rgb(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 10px 25px;
+    letter-spacing: 2px;
+}
+
+.dlBtn{
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    border: none;
+    background: #f55951;
+}
+
+.dlBtn:hover {
+    color: #f55951;
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .dlBtn:before,
+  .dlBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f55951;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003,
+      4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+  }
+  
+  .dlBtn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .dlBtn:hover:before,
+  .dlBtn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
+
+/* Home Section End */
+
+/* Images */
+.imageGrid{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 2fr);
+    justify-items: center;
+}
+
+.imageGrid.about{
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.imageGridItem{
+    justify-content: center;
+    align-content: center;
+}
+
+.webLogo{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.image{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+/* Images End */
+
+/* Texts */
+.sectionTitle{
+    font-size: 30px;
+    border-bottom: 2px solid #5e5e5e;
+    color: #5e5e5e;
+    margin-bottom: 15px;
+}
+
+/* Texts End */
+
+
+
+
+@media screen and (max-width: 760px) {
+    .grid-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .navMenu{
+        display: none;
+    }
+
+    .image{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .webLogo{
+        width: 100%;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+
+
+/* Custom Letter G Using CSS Grid */
+.grid-items.lg{
+    overflow: hidden;
+}
+
+.letterGridContainer{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(17, 1fr);
+    margin-bottom: 0.2rem;
+}
+
+.letterGridContainerItems{
+    padding: 0.2rem;
+}
+
+/* .grid-items.lg div:nth-child(even){
+    transform: translate(-100%, 0);
+}
+.grid-items.lg div:nth-child(odd){
+    transform: translate(90%, 0);
+    animation: move 1000ms; 
+} */
+
+.letterGridContainer.lg4 div:nth-child(2),
+.letterGridContainer.lg5 div:nth-child(2),
+.letterGridContainer.lg6 div:nth-child(2),
+.letterGridContainer.lg7 div:nth-child(2),
+.letterGridContainer.lg8 div:nth-child(2),
+.letterGridContainer.lg9 div:nth-child(2),
+.letterGridContainer.lg10 div:nth-child(2),
+.letterGridContainer.lg11 div:nth-child(2),
+.letterGridContainer.lg12 div:nth-child(2),
+.letterGridContainer.lg13 div:nth-child(2),
+.letterGridContainer.lg14 div:nth-child(2),
+.letterGridContainer.lg15 div:nth-child(2),
+.letterGridContainer.lg16 div:nth-child(2),
+.letterGridContainer.lg17 div:nth-child(2),
+
+.letterGridContainer.lg4 div:nth-child(3),.letterGridContainer.lg4 div:nth-child(4),
+.letterGridContainer.lg5 div:nth-child(3),.letterGridContainer.lg5 div:nth-child(4),
+.letterGridContainer.lg6 div:nth-child(3),.letterGridContainer.lg6 div:nth-child(4),
+.letterGridContainer.lg15 div:nth-child(3),.letterGridContainer.lg15 div:nth-child(4),
+.letterGridContainer.lg16 div:nth-child(3),.letterGridContainer.lg16 div:nth-child(4),
+.letterGridContainer.lg17 div:nth-child(3),.letterGridContainer.lg17 div:nth-child(4),
+.letterGridContainer.lg12 div:nth-child(4),.letterGridContainer.lg13 div:nth-child(4),
+.letterGridContainer.lg14 div:nth-child(4),
+
+.letterGridContainer.lg4 div:nth-child(5),
+.letterGridContainer.lg5 div:nth-child(5),
+.letterGridContainer.lg6 div:nth-child(5),
+.letterGridContainer.lg7 div:nth-child(5),
+.letterGridContainer.lg8 div:nth-child(5),
+.letterGridContainer.lg9 div:nth-child(5),
+.letterGridContainer.lg10 div:nth-child(5),
+.letterGridContainer.lg11 div:nth-child(5),
+.letterGridContainer.lg12 div:nth-child(5),
+.letterGridContainer.lg13 div:nth-child(5),
+.letterGridContainer.lg14 div:nth-child(5),
+.letterGridContainer.lg15 div:nth-child(5),
+.letterGridContainer.lg16 div:nth-child(5),
+.letterGridContainer.lg17 div:nth-child(5),
+
+.letterGridContainer.lg15 div:nth-child(6),.letterGridContainer.lg15 div:nth-child(7),
+.letterGridContainer.lg16 div:nth-child(6),.letterGridContainer.lg16 div:nth-child(7),
+.letterGridContainer.lg17 div:nth-child(6),.letterGridContainer.lg17 div:nth-child(7),
+
+.letterGridContainer.lg4 div:nth-child(8),
+.letterGridContainer.lg5 div:nth-child(8),
+.letterGridContainer.lg6 div:nth-child(8),
+.letterGridContainer.lg7 div:nth-child(8),
+.letterGridContainer.lg8 div:nth-child(8),
+.letterGridContainer.lg9 div:nth-child(8),
+.letterGridContainer.lg10 div:nth-child(8),
+.letterGridContainer.lg11 div:nth-child(8),
+.letterGridContainer.lg12 div:nth-child(8),
+.letterGridContainer.lg13 div:nth-child(8),
+.letterGridContainer.lg14 div:nth-child(8),
+.letterGridContainer.lg15 div:nth-child(8),
+.letterGridContainer.lg16 div:nth-child(8),
+.letterGridContainer.lg17 div:nth-child(8),
+
+.letterGridContainer.lg15 div:nth-child(9),.letterGridContainer.lg15 div:nth-child(10),
+.letterGridContainer.lg16 div:nth-child(9),.letterGridContainer.lg16 div:nth-child(10),
+.letterGridContainer.lg17 div:nth-child(9),.letterGridContainer.lg17 div:nth-child(10),
+
+.letterGridContainer.lg10 div:nth-child(9),.letterGridContainer.lg10 div:nth-child(10),
+.letterGridContainer.lg11 div:nth-child(9),.letterGridContainer.lg11 div:nth-child(10),
+.letterGridContainer.lg12 div:nth-child(9),.letterGridContainer.lg12 div:nth-child(10),
+
+.letterGridContainer.lg4 div:nth-child(9),.letterGridContainer.lg4 div:nth-child(10),
+.letterGridContainer.lg5 div:nth-child(9),.letterGridContainer.lg5 div:nth-child(10),
+.letterGridContainer.lg6 div:nth-child(9),.letterGridContainer.lg6 div:nth-child(10),
+
+.letterGridContainer.lg4 div:nth-child(11),
+.letterGridContainer.lg5 div:nth-child(11),
+.letterGridContainer.lg6 div:nth-child(11),
+.letterGridContainer.lg7 div:nth-child(11),
+.letterGridContainer.lg8 div:nth-child(11),
+.letterGridContainer.lg9 div:nth-child(11),
+.letterGridContainer.lg10 div:nth-child(11),
+.letterGridContainer.lg11 div:nth-child(11),
+.letterGridContainer.lg12 div:nth-child(11),
+.letterGridContainer.lg13 div:nth-child(11),
+.letterGridContainer.lg14 div:nth-child(11),
+.letterGridContainer.lg15 div:nth-child(11),
+.letterGridContainer.lg16 div:nth-child(11),
+.letterGridContainer.lg17 div:nth-child(11),
+
+.letterGridContainer.lg4 div:nth-child(12),.letterGridContainer.lg4 div:nth-child(13),
+.letterGridContainer.lg5 div:nth-child(12),.letterGridContainer.lg5 div:nth-child(13),
+.letterGridContainer.lg6 div:nth-child(12),.letterGridContainer.lg6 div:nth-child(13),
+
+.letterGridContainer.lg7 div:nth-child(13),
+.letterGridContainer.lg8 div:nth-child(13),
+.letterGridContainer.lg9 div:nth-child(13),
+.letterGridContainer.lg10 div:nth-child(13),
+.letterGridContainer.lg11 div:nth-child(13),
+.letterGridContainer.lg12 div:nth-child(13),
+.letterGridContainer.lg13 div:nth-child(13),
+.letterGridContainer.lg14 div:nth-child(13),
+.letterGridContainer.lg15 div:nth-child(13),
+.letterGridContainer.lg16 div:nth-child(13),
+.letterGridContainer.lg17 div:nth-child(13),
+
+.letterGridContainer.lg4 div:nth-child(14),
+.letterGridContainer.lg5 div:nth-child(14),
+.letterGridContainer.lg6 div:nth-child(14),
+.letterGridContainer.lg7 div:nth-child(14),
+.letterGridContainer.lg8 div:nth-child(14),
+.letterGridContainer.lg9 div:nth-child(14),
+.letterGridContainer.lg10 div:nth-child(14),
+.letterGridContainer.lg11 div:nth-child(14),
+.letterGridContainer.lg12 div:nth-child(14),
+.letterGridContainer.lg13 div:nth-child(14),
+.letterGridContainer.lg14 div:nth-child(14),
+.letterGridContainer.lg15 div:nth-child(14),
+.letterGridContainer.lg16 div:nth-child(14),
+.letterGridContainer.lg17 div:nth-child(14),
+
+.letterGridContainer.lg4 div:nth-child(15),.letterGridContainer.lg4 div:nth-child(16),
+.letterGridContainer.lg5 div:nth-child(15),.letterGridContainer.lg5 div:nth-child(16),
+.letterGridContainer.lg6 div:nth-child(15),.letterGridContainer.lg6 div:nth-child(16),
+
+.letterGridContainer.lg7 div:nth-child(16),
+.letterGridContainer.lg8 div:nth-child(16),
+.letterGridContainer.lg9 div:nth-child(16),
+.letterGridContainer.lg10 div:nth-child(16),
+.letterGridContainer.lg11 div:nth-child(16),
+.letterGridContainer.lg12 div:nth-child(16),
+.letterGridContainer.lg13 div:nth-child(16),
+.letterGridContainer.lg14 div:nth-child(16),
+.letterGridContainer.lg15 div:nth-child(16),
+.letterGridContainer.lg16 div:nth-child(16),
+.letterGridContainer.lg17 div:nth-child(16)
+
+    {background-color: #f55951;}
